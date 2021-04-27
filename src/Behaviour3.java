@@ -1,4 +1,5 @@
 import jade.core.behaviours.Behaviour;
+import jade.lang.acl.ACLMessage;
 
 public class Behaviour3 extends Behaviour {
     int step =0;
@@ -14,7 +15,14 @@ public class Behaviour3 extends Behaviour {
         }
 
         System.out.println("This is a Generic Behaviour");
+
+        ACLMessage msg=null;
+        msg= this.myAgent.blockingReceive();
+        if (msg.getContent() != null)
+        System.out.println("Message recu ");
+
     }
+
 
     public boolean done(){ return step==3;}
 }
