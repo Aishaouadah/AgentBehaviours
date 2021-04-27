@@ -9,14 +9,12 @@ public class Behaviour3 extends Behaviour {
 
         switch (step)
         {
-            case 0: System.out.println("STEP" + step);step++; break;
-            case 1:System.out.println("STEP" + step); step++; break;
-            case 2: System.out.println("STEP" + step); step++; break;
+            case 0,1,2: System.out.println("STEP" + step);step++; break;
         }
 
         System.out.println("This is a Generic Behaviour");
 
-        ACLMessage msg=null;
+        ACLMessage msg;
         msg= this.myAgent.blockingReceive();
         if (msg.getContent() != null)
         System.out.println("Message recu ");
