@@ -11,5 +11,7 @@ public class Behaviour1 extends OneShotBehaviour {
         msg.addReceiver(new AID("A3", AID.ISLOCALNAME));
         msg.setContent(Integer.toString(A));
         this.myAgent.send(msg);
+        System.out.println("Message sent");
+
     }
 }

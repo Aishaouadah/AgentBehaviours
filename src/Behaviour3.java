@@ -15,10 +15,13 @@ public class Behaviour3 extends Behaviour {
         System.out.println("This is a Generic Behaviour");
 
         ACLMessage msg;
-        msg= this.myAgent.blockingReceive();
-        if (msg.getContent() != null)
+        msg= this.myAgent.receive();
+        if (msg != null)
         System.out.println("Message recu ");
-
+       /* msg= this.myAgent.Blokingreceive();
+        if (msg.getcontent() != null)
+        System.out.println("Message recu ");
+       */
     }
 
 
